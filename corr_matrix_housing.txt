@@ -1,0 +1,43 @@
+SalePrice        1.000000
+OverallQual      0.790982
+GrLivArea        0.708624
+GarageCars       0.640409
+GarageArea       0.623431
+TotalBsmtSF      0.613581
+1stFlrSF         0.605852
+FullBath         0.560664
+TotRmsAbvGrd     0.533723
+YearBuilt        0.522897
+YearRemodAdd     0.507101
+GarageYrBlt      0.486362
+MasVnrArea       0.477493
+Fireplaces       0.466929
+BsmtFinSF1       0.386420
+LotFrontage      0.351799
+WoodDeckSF       0.324413
+2ndFlrSF         0.319334
+OpenPorchSF      0.315856
+HalfBath         0.284108
+LotArea          0.263843
+BsmtFullBath     0.227122
+BsmtUnfSF        0.214479
+BedroomAbvGr     0.168213
+ScreenPorch      0.111447
+PoolArea         0.092404
+MoSold           0.046432
+3SsnPorch        0.044584
+BsmtFinSF2      -0.011378
+BsmtHalfBath    -0.016844
+MiscVal         -0.021190
+Id              -0.021917
+LowQualFinSF    -0.025606
+YrSold          -0.028923
+OverallCond     -0.077856
+MSSubClass      -0.084284
+EnclosedPorch   -0.128578
+KitchenAbvGr    -0.135907
+
+corr_train_csv["LotAreaPerOvrCond"] = corr_train_csv["LotArea"] / corr_train_csv["OverallCond"]
+corr_train_csv["1stFlrVs2ndFlr"] = corr_train_csv["1stFlrSF"] - corr_train_csv["2ndFlrSF"]
+corr_train_csv["TotalGrade"] = corr_train_csv["OverallCond"] + corr_train_csv["OverallQual"]
+corr_train_csv["FullAndHalfBsmtBath"] = corr_train_csv["BsmtFullBath"] + corr_train_csv["BsmtHalfBath"] 
